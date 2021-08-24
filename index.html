@@ -5,11 +5,58 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FCC: Survey Form Project</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="public/styles.css">
+  
 </head>
 <body>
-  <main>
-
+  <header class="container text-center mx-auto">
+    <h1 id="title" class="m-4 text-4xl font-bold">FCC Survey Form Project</h1>
+    <p id="description">A short survey form project for Free Code Camp Responsive Web Design certificate</p>
+  </header>
+  <main class="container">
+    <form id="survey-form">
+      <div>
+        <label id="name-label" for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="please enter your name" required />
+      </div>
+      <div>
+        <label id="email-label" for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="please enter your email" required>
+      </div>
+      <div>
+        <label id="number-label" for="number">Number</label> 
+        <input type="number" name="number" id="number" min="1" max="100" placeholder="favourite number">
+      </div>
+      <div>
+        <p>How happy are you today?</p>
+        <select name="happiness" id="dropdown" required>
+          <option value="very-happy">Very happy</option>
+          <option value="happy">Happy</option>
+          <option value="unhappy">Unhappy</option>
+          <option value="very-unhappy">Very unhappy</option>
+        </select>
+      </div>
+      <div>
+        <p>Select a checkbox</p>
+        <label for="checkboxes"><input name="checkboxes" value="option1" type="checkbox">Option 1</label>
+        <label for="checkboxes"><input name="checkboxes" value="option2" type="checkbox">Option 2</label>
+        <label for="checkboxes"><input name="checkboxes" value="option3" type="checkbox">Option 3</label>
+      </div>
+      <div>
+        <p>Select a radio button</p>
+        <label for="radio-buttons"><input name="radio-buttons" type="radio" value="radio1">Radio 1</label>
+        <label for="radio-buttons"><input name="radio-buttons" type="radio" value="radio2">Radio 2</label>
+        <label for="radio-buttons"><input name="radio-buttons" type="radio" value="radio3">Radio 3</label>
+      </div>
+      <div>
+        <label for="comments">Additional comments</label>
+        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+      </div>
+      <div>
+        <button id="submit" type="submit">submit</button>
+      </div>
+    </form>
   </main>
 </body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
